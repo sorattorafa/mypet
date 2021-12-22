@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/home.dart';
+import 'package:petshop/view/login.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,15 +21,15 @@ class MyApp extends StatelessWidget {
         ),
         inputDecorationTheme: const InputDecorationTheme(
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(22)),
+              borderRadius: BorderRadius.all(Radius.circular(50)),
               borderSide: BorderSide.none,
             ),
             contentPadding: EdgeInsets.all(8),
             filled: true,
             fillColor: Color(0x0A000000),
-          ),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const LoginScreen(title: 'Petshop'),
     );
   }
 }
