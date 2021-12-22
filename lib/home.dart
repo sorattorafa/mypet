@@ -35,6 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            TextButton(onPressed: () {}, child: const Text('Click me')),
+            ElevatedButton(onPressed: () {}, child: const Text('Click me')),
           ],
         ),
       ),
