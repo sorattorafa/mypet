@@ -10,15 +10,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.purple,
         brightness: Brightness.dark,
         primaryColor: Colors.deepPurple,
-        scaffoldBackgroundColor: Colors.green,
+        scaffoldBackgroundColor: Colors.lightBlueAccent,
         appBarTheme: AppBarTheme(
-          color: Colors.yellow,
+          color: Colors.lightBlue,
           iconTheme: IconThemeData(color: Colors.grey[800]),
           elevation: 1.5,
         ),
+        inputDecorationTheme: const InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(22)),
+              borderSide: BorderSide.none,
+            ),
+            contentPadding: EdgeInsets.all(8),
+            filled: true,
+            fillColor: Color(0x0A000000),
+          ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

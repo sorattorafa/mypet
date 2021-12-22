@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:petshop/view/widgets/formitem.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _LoginScreenState extends State<LoginScreen> {
   int _counter = 0;
 
   final _formKey = GlobalKey<FormState>();
@@ -55,29 +55,32 @@ class _MyHomePageState extends State<MyHomePage> {
               formFieldName: 'password',
               controller: senhaController,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () async {
-                    if (_formKey.currentState!.validate()) {
-                      //TODO: DO SOMETHING
-                    }
-                  }, //login,
-                  child: Text('Login'),
-                ),
-                SizedBox(width: 12),
-                ElevatedButton(
-                  onPressed: () async {
-                    FocusScopeNode currentFocus = FocusScope.of(context);
-                    currentFocus.unfocus();
-                    if (_formKey.currentState!.validate()) {
-                      //TODO: DO SOMETHING
-                    }
-                  },
-                  child: Text('Sign up'),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () async {
+                      if (_formKey.currentState!.validate()) {
+                        //TODO: DO SOMETHING
+                      }
+                    }, //login,
+                    child: Text('Login'),
+                  ),
+                  SizedBox(width: 12),
+                  ElevatedButton(
+                    onPressed: () async {
+                      FocusScopeNode currentFocus = FocusScope.of(context);
+                      currentFocus.unfocus();
+                      if (_formKey.currentState!.validate()) {
+                        //TODO: DO SOMETHING
+                      }
+                    },
+                    child: Text('Sign up'),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
