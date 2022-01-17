@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/view/login.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:petshop/theme/theme_cubit.dart';
+import 'package:petshop/views/login.dart';
+import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -7,29 +10,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        brightness: Brightness.dark,
-        primaryColor: Colors.deepPurple,
-        scaffoldBackgroundColor: Colors.cyan.shade600,
-        appBarTheme: AppBarTheme(
-          color: Colors.lightBlue,
-          iconTheme: IconThemeData(color: Colors.grey[800]),
-          elevation: 1.5,
-        ),
-        inputDecorationTheme: const InputDecorationTheme(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(50)),
-              borderSide: BorderSide.none,
-            ),
-            contentPadding: EdgeInsets.all(8),
-            filled: true,
-            fillColor: Color(0x0A000000),
-        ),
-      ),
-      home: const LoginScreen(title: 'Petshop'),
-    );
+    return Builder(builder: (context) {
+      return MultiProvider(
+        providers: [
+          BlocProvider(
+            create: (_) => ThemeCubit(),
+          ),
+        ],
+        child: BlocBuilder<ThemeCubit, ThemeData>(builder: (_, theme) {
+          return MaterialApp(
+            title: 'Flutter Demo',
+            theme: theme,
+            home: const LoginScreen(title: 'Petshop'),
+          );
+        }),
+      );
+    });
   }
 }
