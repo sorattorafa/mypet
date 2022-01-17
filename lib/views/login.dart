@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/theme/theme_cubit.dart';
+import 'package:petshop/providers/theme/theme_cubit.dart';
 import 'package:petshop/views/widgets/formitem.dart';
 import 'package:provider/provider.dart';
 
@@ -68,8 +68,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  child: Wrap(
+                    direction: Axis.horizontal,
                     children: [
                       ElevatedButton(
                         onPressed: () async {

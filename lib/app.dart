@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:petshop/theme/theme_cubit.dart';
+import 'package:petshop/providers/theme/theme_cubit.dart';
 import 'package:petshop/views/login.dart';
 import 'package:provider/provider.dart';
 
