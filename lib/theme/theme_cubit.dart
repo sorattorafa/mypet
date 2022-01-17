@@ -11,7 +11,7 @@ class ThemeCubit extends Cubit<ThemeData> {
   static final _lightTheme = ThemeData(
     primarySwatch: Colors.orange,
     primaryColor: Colors.deepPurple,
-    scaffoldBackgroundColor: Colors.cyan.shade600,
+//    scaffoldBackgroundColor: Colors.cyan.shade600,
     appBarTheme: AppBarTheme(
       color: Colors.lightBlue,
       iconTheme: IconThemeData(color: Colors.grey[800]),
@@ -28,6 +28,7 @@ class ThemeCubit extends Cubit<ThemeData> {
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       foregroundColor: Colors.white,
+      backgroundColor: Colors.orange,
     ),
     brightness: Brightness.light,
   );
@@ -35,7 +36,7 @@ class ThemeCubit extends Cubit<ThemeData> {
   static final _darkTheme = ThemeData(
     primarySwatch: Colors.orange,
     primaryColor: Colors.deepPurple,
-    scaffoldBackgroundColor: Colors.cyan.shade600,
+    //scaffoldBackgroundColor: Colors.cyan.shade600,
     appBarTheme: AppBarTheme(
       color: Colors.lightBlue,
       iconTheme: IconThemeData(color: Colors.grey[800]),
@@ -52,6 +53,7 @@ class ThemeCubit extends Cubit<ThemeData> {
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       foregroundColor: Colors.black,
+      backgroundColor: Colors.orange,
     ),
     brightness: Brightness.dark,
   );
