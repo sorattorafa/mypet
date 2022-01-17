@@ -13,7 +13,7 @@ class ThemeCubit extends Cubit<ThemeData> {
     primaryColor: Colors.deepPurple,
 //    scaffoldBackgroundColor: Colors.cyan.shade600,
     appBarTheme: AppBarTheme(
-      color: Colors.lightBlue,
+      color: Colors.orange,
       iconTheme: IconThemeData(color: Colors.grey[800]),
       elevation: 1.5,
     ),
@@ -38,7 +38,7 @@ class ThemeCubit extends Cubit<ThemeData> {
     primaryColor: Colors.deepPurple,
     //scaffoldBackgroundColor: Colors.cyan.shade600,
     appBarTheme: AppBarTheme(
-      color: Colors.lightBlue,
+      color: Colors.orange,
       iconTheme: IconThemeData(color: Colors.grey[800]),
       elevation: 1.5,
     ),
