@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: LayoutBuilder(
         builder: (context, constraints) {
           return Padding(
-            padding: EdgeInsets.fromLTRB(constraints.maxWidth/3, 30, constraints.maxWidth/3, 30),
+            padding: EdgeInsets.fromLTRB(constraints.maxWidth/5, 30, constraints.maxWidth/5, 30),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       visible: true,
                       child: IconButton(
                         icon: const Icon(Icons.cancel),
-                        color: Colors.purple.shade500,
+                        color: Colors.orange.shade500,
                         onPressed: () {
                           setState(() {
                             emailController = TextEditingController(text: '');
