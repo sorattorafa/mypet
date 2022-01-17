@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/bloc/login/login_bloc.dart';
 import 'package:petshop/providers/theme/theme_cubit.dart';
 import 'package:petshop/views/widgets/formitem.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-       floatingActionButton: Column(
+      floatingActionButton: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: LayoutBuilder(builder: (context, constraints) {
         return Padding(
           padding: EdgeInsets.fromLTRB(
-              constraints.maxWidth / 5, 30, constraints.maxWidth / 5, 30),
+              constraints.maxWidth / 6, 30, constraints.maxWidth / 6, 30),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -68,29 +69,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Wrap(
-                    direction: Axis.horizontal,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () async {
-                          if (_formKey.currentState!.validate()) {
-                            //TODO: DO SOMETHING
-                          }
-                        }, //login,
-                        child: const Text('Login'),
-                      ),
-                      const SizedBox(width: 12),
-                      ElevatedButton(
-                        onPressed: () async {
-                          FocusScopeNode currentFocus = FocusScope.of(context);
-                          currentFocus.unfocus();
-                          if (_formKey.currentState!.validate()) {
-                            //TODO: DO SOMETHING
-                          }
-                        },
-                        child: const Text('Sign up'),
-                      ),
-                    ],
+                  child: ElevatedButton(
+                    onPressed: () {
+                      return context.read<LoginBloc>().add(
+                            LoginEvent.login(
+                              emailController.text,
+                              senhaController.text,
+                            ),
+                          );
+                    }, //login,
+                    child: const Text('Login'),
                   ),
                 ),
               ],
