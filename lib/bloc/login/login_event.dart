@@ -5,4 +5,5 @@ class LoginEvent with _$LoginEvent {
   const factory LoginEvent.started() = _Started;
   const factory LoginEvent.login(String credential, String password) = _Login;
   const factory LoginEvent.logout() = _Logout;
+  const factory LoginEvent.fetchList() = _FetchList;
 }

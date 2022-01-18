@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'login_bloc.dart';
@@ -32,6 +31,10 @@ class _$LoginEventTearOff {
   _Logout logout() {
     return const _Logout();
   }
+
+  _FetchList fetchList() {
+    return const _FetchList();
+  }
 }
 
 /// @nodoc
@@ -44,6 +47,7 @@ mixin _$LoginEvent {
     required TResult Function() started,
     required TResult Function(String credential, String password) login,
     required TResult Function() logout,
+    required TResult Function() fetchList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +55,7 @@ mixin _$LoginEvent {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +63,7 @@ mixin _$LoginEvent {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -66,6 +72,7 @@ mixin _$LoginEvent {
     required TResult Function(_Started value) started,
     required TResult Function(_Login value) login,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_FetchList value) fetchList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,6 +80,7 @@ mixin _$LoginEvent {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,6 +88,7 @@ mixin _$LoginEvent {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -142,6 +151,7 @@ class _$_Started implements _Started {
     required TResult Function() started,
     required TResult Function(String credential, String password) login,
     required TResult Function() logout,
+    required TResult Function() fetchList,
   }) {
     return started();
   }
@@ -152,6 +162,7 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
   }) {
     return started?.call();
   }
@@ -162,6 +173,7 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -176,6 +188,7 @@ class _$_Started implements _Started {
     required TResult Function(_Started value) started,
     required TResult Function(_Login value) login,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_FetchList value) fetchList,
   }) {
     return started(this);
   }
@@ -186,6 +199,7 @@ class _$_Started implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
   }) {
     return started?.call(this);
   }
@@ -196,6 +210,7 @@ class _$_Started implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -285,6 +300,7 @@ class _$_Login implements _Login {
     required TResult Function() started,
     required TResult Function(String credential, String password) login,
     required TResult Function() logout,
+    required TResult Function() fetchList,
   }) {
     return login(credential, password);
   }
@@ -295,6 +311,7 @@ class _$_Login implements _Login {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
   }) {
     return login?.call(credential, password);
   }
@@ -305,6 +322,7 @@ class _$_Login implements _Login {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -319,6 +337,7 @@ class _$_Login implements _Login {
     required TResult Function(_Started value) started,
     required TResult Function(_Login value) login,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_FetchList value) fetchList,
   }) {
     return login(this);
   }
@@ -329,6 +348,7 @@ class _$_Login implements _Login {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
   }) {
     return login?.call(this);
   }
@@ -339,6 +359,7 @@ class _$_Login implements _Login {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -398,6 +419,7 @@ class _$_Logout implements _Logout {
     required TResult Function() started,
     required TResult Function(String credential, String password) login,
     required TResult Function() logout,
+    required TResult Function() fetchList,
   }) {
     return logout();
   }
@@ -408,6 +430,7 @@ class _$_Logout implements _Logout {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
   }) {
     return logout?.call();
   }
@@ -418,6 +441,7 @@ class _$_Logout implements _Logout {
     TResult Function()? started,
     TResult Function(String credential, String password)? login,
     TResult Function()? logout,
+    TResult Function()? fetchList,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -432,6 +456,7 @@ class _$_Logout implements _Logout {
     required TResult Function(_Started value) started,
     required TResult Function(_Login value) login,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_FetchList value) fetchList,
   }) {
     return logout(this);
   }
@@ -442,6 +467,7 @@ class _$_Logout implements _Logout {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
   }) {
     return logout?.call(this);
   }
@@ -452,6 +478,7 @@ class _$_Logout implements _Logout {
     TResult Function(_Started value)? started,
     TResult Function(_Login value)? login,
     TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -463,6 +490,121 @@ class _$_Logout implements _Logout {
 
 abstract class _Logout implements LoginEvent {
   const factory _Logout() = _$_Logout;
+}
+
+/// @nodoc
+abstract class _$FetchListCopyWith<$Res> {
+  factory _$FetchListCopyWith(
+          _FetchList value, $Res Function(_FetchList) then) =
+      __$FetchListCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$FetchListCopyWithImpl<$Res> extends _$LoginEventCopyWithImpl<$Res>
+    implements _$FetchListCopyWith<$Res> {
+  __$FetchListCopyWithImpl(_FetchList _value, $Res Function(_FetchList) _then)
+      : super(_value, (v) => _then(v as _FetchList));
+
+  @override
+  _FetchList get _value => super._value as _FetchList;
+}
+
+/// @nodoc
+
+class _$_FetchList implements _FetchList {
+  const _$_FetchList();
+
+  @override
+  String toString() {
+    return 'LoginEvent.fetchList()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _FetchList);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String credential, String password) login,
+    required TResult Function() logout,
+    required TResult Function() fetchList,
+  }) {
+    return fetchList();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String credential, String password)? login,
+    TResult Function()? logout,
+    TResult Function()? fetchList,
+  }) {
+    return fetchList?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String credential, String password)? login,
+    TResult Function()? logout,
+    TResult Function()? fetchList,
+    required TResult orElse(),
+  }) {
+    if (fetchList != null) {
+      return fetchList();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Login value) login,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_FetchList value) fetchList,
+  }) {
+    return fetchList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
+  }) {
+    return fetchList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_FetchList value)? fetchList,
+    required TResult orElse(),
+  }) {
+    if (fetchList != null) {
+      return fetchList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchList implements LoginEvent {
+  const factory _FetchList() = _$_FetchList;
 }
 
 /// @nodoc
