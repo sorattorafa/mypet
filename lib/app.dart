@@ -34,18 +34,7 @@ class MyApp extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   ),
                 ),
-                loggedIn: (user) => Scaffold(
-                  body: const Center(
-                    child: Text('Seja bem vindo!'),
-                  ),
-                  floatingActionButton: FloatingActionButton(
-                      child: const Icon(Icons.exit_to_app),
-                      onPressed: () {
-                        return context
-                            .read<LoginBloc>()
-                            .add(const LoginEvent.logout());
-                      }),
-                ),
+                loggedIn: (user) => const Home(),
                 error: (e) => Scaffold(
                   body: Center(
                     child: Text(e.toString()),
@@ -57,5 +46,27 @@ class MyApp extends StatelessWidget {
         }),
       );
     });
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: const Center(
+        child: Text('Seja bem vindo!'),
+      ),
+      floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.exit_to_app),
+          onPressed: () {
+            return context
+                .read<LoginBloc>()
+                .add(const LoginEvent.logout());
+          }),
+    );
   }
 }
