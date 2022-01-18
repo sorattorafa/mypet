@@ -17,9 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Patterns
     - Bloc
-    - Singleton
     - Mocked Tests
-    - How to mock a singleton to test
 ## Use cases
 ### Login 
 
